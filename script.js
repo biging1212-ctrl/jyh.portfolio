@@ -102,19 +102,6 @@ if (pageNum === 2) {
   continue;
 }
   
-  iframe.allow =
-    'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
-
-  iframe.allowFullscreen = true;
-
-  videoWrap.appendChild(iframe);
-  slot.appendChild(videoWrap);
-
-  section.appendChild(slot);
-
-  continue;
-}
-  
   // upload zone
   const zone = document.createElement('div');
   zone.className = 'upload-zone';
