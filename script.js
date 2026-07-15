@@ -53,8 +53,8 @@
 })();
 
 // ── Config ──
-const TOTAL_PAGES = 77; // pages 2–78 (page 79 = closing HTML)
-const FINAL_PAGE_TOTAL = 79;
+const TOTAL_PAGES = 70; // pages 2–71 (page 72 = closing HTML)
+const FINAL_PAGE_TOTAL = 72;
 const STORAGE_KEY = 'portfolio_slots';
 
 // ── Load saved slots from localStorage ──
@@ -72,12 +72,12 @@ const section = document.getElementById('portfolio');
 const saved   = loadSaved();
 
 for (let i = 1; i <= TOTAL_PAGES; i++) {
-  const pageNum = i + 1; // pages 2–78
+  const pageNum = i + 1; // pages 2–71
   const slot    = document.createElement('div');
   slot.className   = 'portfolio-slot';
   slot.dataset.index = i;
 
-  // 모든 페이지에 이동용 id 부여: page-02, page-03, page-21 ...
+  // 모든 페이지에 이동용 id 부여: page-02, page-03, page-18 ...
 slot.id = `page-${String(pageNum).padStart(2, '0')}`;
 
   // page number badge
@@ -102,20 +102,6 @@ if (pageNum === 2) {
   continue;
 }
   
-// ── PAGE 35: YouTube Video ──
-if (pageNum === 35) {
-  slot.classList.add('youtube-page');
-
-  const videoWrap = document.createElement('div');
-  videoWrap.className = 'youtube-video-wrap';
-
-  const iframe = document.createElement('iframe');
-
-  iframe.src =
-    'https://www.youtube-nocookie.com/embed/9JKTAvEiiZU?rel=0&playsinline=1';
-
-  iframe.title = 'Portfolio YouTube Video';
-
   iframe.allow =
     'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
 
@@ -405,8 +391,8 @@ function addProjectIndex(slot) {
   const projects = [
     {
       num: '01',
-      title: 'DAYMINE',
-      desc: 'Branding / Product',
+      title: 'TIDE',
+      desc: 'Ai Branding / Product',
       image: 'assets/images/project-01.png',
       target: '#page-03',
       imgX: 200,
@@ -414,37 +400,37 @@ function addProjectIndex(slot) {
     },
     {
       num: '02',
-      title: 'WINKLE',
-      desc: 'Branding / Product / Character',
+      title: 'DAYMINE',
+      desc: 'Branding / Product',
       image: 'assets/images/project-02.png',
-      target: '#page-21',
+      target: '#page-18',
       imgX: 469,
       textX: 469
     },
     {
       num: '03',
-      title: 'ORION',
-      desc: 'Sns Content',
+      title: 'BPT',
+      desc: 'Rebranding',
       image: 'assets/images/project-03.png',
-      target: '#page-39',
+      target: '#page-34',
       imgX: 738,
       textX: 738
     },
     {
       num: '04',
-      title: 'TIDE',
-      desc: 'Ai Branding / Product',
+      title: 'ORION',
+      desc: 'Sns Content',
       image: 'assets/images/project-04.png',
-      target: '#page-46',
+      target: '#page-47',
       imgX: 1007,
       textX: 1007
     },
     {
       num: '05',
-      title: '한국소방안전원',
-      desc: 'Campaign',
+      title: 'NS 홈쇼핑',
+      desc: 'Sns Content',
       image: 'assets/images/project-05.png',
-      target: '#page-61',
+      target: '#page-54',
       imgX: 1276,
       textX: 1276
     },
@@ -453,7 +439,7 @@ function addProjectIndex(slot) {
       title: '삼쩜삼',
       desc: 'Pop-up store',
       image: 'assets/images/project-06.png',
-      target: '#page-68',
+      target: '#page-61',
       imgX: 1546,
       textX: 1545
     }
