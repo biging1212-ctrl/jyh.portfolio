@@ -410,8 +410,8 @@ function addProjectIndex(slot) {
     },
     {
       num: '05',
-      title: '롯데렌터카 / 실무',
-      desc: 'Promotion Content',
+      title: '롯데렌터카',
+      desc: 'Promotion Content/ 실무',
       image: 'assets/images/project-05.png',
       target: '#page-50',
       imgX: 1508,
