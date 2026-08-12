@@ -393,7 +393,7 @@ function addProjectIndex(slot) {
     {
       num: '03',
       title: 'ORION',
-      desc: 'Sns Content',
+      desc: 'Promotion Content / 실무',
       image: 'assets/images/project-03.png',
       target: '#page-32',
       imgX: 864,
@@ -402,7 +402,7 @@ function addProjectIndex(slot) {
     {
       num: '04',
       title: '빙그레',
-      desc: 'Pop-up store',
+      desc: 'Pop-up Store / 실무',
       image: 'assets/images/project-04.png',
       target: '#page-39',
       imgX: 1186,
@@ -410,8 +410,8 @@ function addProjectIndex(slot) {
     },
     {
       num: '05',
-      title: '롯데렌터카',
-      desc: 'Sns Content',
+      title: '롯데렌터카 / 실무',
+      desc: 'Promotion Content',
       image: 'assets/images/project-05.png',
       target: '#page-50',
       imgX: 1508,
