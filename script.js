@@ -370,192 +370,188 @@ trackedSections.forEach((s) => navObserver.observe(s));
 
 function addProjectIndex(slot) {
   const projects = [
-    {
-      num: '01',
-      title: 'TIDE',
-      desc: 'Beauty Tech Branding',
-      image: 'assets/images/project-01.png',
-      target: '#page-03',
+  {
+    num: '01',
+    title: 'TIDE',
+    desc: 'Beauty Tech Branding',
+    image: 'assets/images/project-01.png',
+    target: '#page-03',
 
-      imgX: 200,
-      imgY: 402,
-      imgW: 362,
-      imgH: 277,
+    imgX: 200,
+    imgY: 402,
+    imgW: 335,
+    imgH: 256,
 
-      numX: 365,
-      numY: 363,
+    numX: 351,
+    numY: 367,
 
-      titleX: 363,
-      titleY: 695,
+    titleX: 349,
+    titleY: 680,
 
-      descX: 305,
-      descY: 723
-    },
+    descX: 291,
+    descY: 705
+  },
 
-    {
-      num: '02',
-      title: 'DAYMINE',
-      desc: 'Health Care Branding',
-      image: 'assets/images/project-02.png',
-      target: '#page-19',
+  {
+    num: '02',
+    title: 'DAYMINE',
+    desc: 'Health Care Branding',
+    image: 'assets/images/project-02.png',
+    target: '#page-19',
 
-      imgX: 586,
-      imgY: 402,
-      imgW: 362,
-      imgH: 518,
+    imgX: 597,
+    imgY: 402,
+    imgW: 335,
+    imgH: 451,
 
-      numX: 751,
-      numY: 363,
+    numX: 748,
+    numY: 367,
 
-      titleX: 729,
-      titleY: 941,
+    titleX: 727,
+    titleY: 875,
 
-      descX: 691,
-      descY: 964
-    },
+    descX: 689,
+    descY: 900
+  },
 
-    {
-      num: '03',
-      title: '3.3',
-      desc: 'Pop - Up Store',
-      image: 'assets/images/project-03.png',
-      target: '#page-34',
+  {
+    num: '03',
+    title: '3.3',
+    desc: 'Pop - Up Store',
+    image: 'assets/images/project-03.png',
+    target: '#page-32',
 
-      imgX: 972,
-      imgY: 402,
-      imgW: 362,
-      imgH: 277,
+    imgX: 994,
+    imgY: 402,
+    imgW: 335,
+    imgH: 256,
 
-      numX: 1137,
-      numY: 363,
+    numX: 1145,
+    numY: 367,
 
-      titleX: 1141,
-      titleY: 700,
+    titleX: 1150,
+    titleY: 680,
 
-      descX: 1101,
-      descY: 723
-    },
+    descX: 1110,
+    descY: 705
+  },
 
-    {
-      num: '04',
-      title: 'ORION',
-      desc: 'Promotion Contents',
-      image: 'assets/images/project-04.png',
-      target: '#page-43',
+  {
+    num: '04',
+    title: 'ORION',
+    desc: 'Promotion Contents',
+    image: 'assets/images/project-04.png',
+    target: '#page-39',
 
-      imgX: 1358,
-      imgY: 402,
-      imgW: 362,
-      imgH: 362,
+    imgX: 1391,
+    imgY: 402,
+    imgW: 335,
+    imgH: 315,
 
-      numX: 1523,
-      numY: 363,
+    numX: 1542,
+    numY: 367,
 
-      titleX: 1512,
-      titleY: 785,
+    titleX: 1531,
+    titleY: 739,
 
-      descX: 1467,
-      descY: 808
-    }
-  ];
+    descX: 1486,
+    descY: 764
+  }
+];
 
   const layer = document.createElement('div');
   layer.className = 'page02-project-layer';
 
   projects.forEach((project) => {
 
-    // 1920 × 1080 디자인 기준 좌표를
-    // 반응형 퍼센트 좌표로 변환
-    const px = (value) => `${(value / 1920) * 100}%`;
-    const py = (value) => `${(value / 1080) * 100}%`;
+  // Figma 기준 1920 × 1080 좌표를 %로 변환
+  const x = (value) => `${(value / 1920) * 100}%`;
+  const y = (value) => `${(value / 1080) * 100}%`;
 
-    layer.innerHTML += `
+  layer.innerHTML += `
 
-      <!-- PROJECT NUMBER -->
-      <span
-        class="page02-text page02-num"
+    <!-- 프로젝트 번호 -->
+    <span
+      class="page02-text page02-num"
+      style="
+        left:${x(project.numX)};
+        top:${y(project.numY)};
+        font-family:'Fustat', sans-serif;
+        font-weight:600;
+        font-size:14px;
+        color:#030303;
+        text-align:center;
+        transform:none;
+        white-space:nowrap;
+      "
+    >
+      ${project.num}
+    </span>
+
+
+    <!-- 프로젝트 이미지 -->
+    <a
+      class="page02-thumb"
+      href="${project.target}"
+      style="
+        left:${x(project.imgX)};
+        top:${y(project.imgY)};
+        width:${x(project.imgW)};
+        height:${y(project.imgH)};
+        transform:none;
+      "
+    >
+      <img
+        src="${project.image}"
+        alt=""
         style="
-          left:${px(project.numX)};
-          top:${py(project.numY)};
-
-          font-family:'Fustat', sans-serif;
-          font-weight:600;
-          font-size:14px;
-          line-height:1;
-          color:#030303;
-          text-align:left;
-          white-space:nowrap;
+          width:100%;
+          height:100%;
+          object-fit:cover;
+          display:block;
         "
-      >
-        ${project.num}
-      </span>
+      />
+    </a>
 
 
-      <!-- PROJECT IMAGE -->
-      <a
-        class="page02-thumb"
-        href="${project.target}"
-        style="
-          left:${px(project.imgX)};
-          top:${py(project.imgY)};
-          width:${px(project.imgW)};
-          height:${py(project.imgH)};
-        "
-      >
-        <img
-          src="${project.image}"
-          alt=""
-          style="
-            width:100%;
-            height:100%;
-            object-fit:cover;
-            display:block;
-          "
-        />
-      </a>
+    <!-- 프로젝트 제목 -->
+    <span
+      class="page02-text page02-title"
+      style="
+        left:${x(project.titleX)};
+        top:${y(project.titleY)};
+        font-family:'Fustat', sans-serif;
+        font-weight:600;
+        font-size:16px;
+        color:#030303;
+        text-align:center;
+        transform:none;
+        white-space:nowrap;
+      "
+    >
+      ${project.title}
+    </span>
 
 
-      <!-- PROJECT TITLE -->
-      <span
-        class="page02-text page02-title"
-        style="
-          left:${px(project.titleX)};
-          top:${py(project.titleY)};
-
-          font-family:'Fustat', sans-serif;
-          font-weight:600;
-          font-size:16px;
-          line-height:1;
-          color:#030303;
-          text-align:center;
-          white-space:nowrap;
-        "
-      >
-        ${project.title}
-      </span>
-
-
-      <!-- PROJECT DESCRIPTION -->
-      <span
-        class="page02-text page02-desc"
-        style="
-          left:${px(project.descX)};
-          top:${py(project.descY)};
-
-          font-family:'Fustat', sans-serif;
-          font-weight:400;
-          font-size:14px;
-          line-height:1;
-          color:#363636;
-          text-align:center;
-          white-space:nowrap;
-        "
-      >
-        ${project.desc}
-      </span>
-
-    `;
-  });
+    <!-- 프로젝트 설명 -->
+    <span
+      class="page02-text page02-desc"
+      style="
+        left:${x(project.descX)};
+        top:${y(project.descY)};
+        font-family:'Fustat', sans-serif;
+        font-weight:400;
+        font-size:14px;
+        color:#585858;
+        text-align:center;
+        transform:none;
+        white-space:nowrap;
+      "
+    >
+      ${project.desc}
+    </span>
+  `;
+});
 
   slot.appendChild(layer);
 }
