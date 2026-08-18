@@ -648,22 +648,18 @@ img, video { display: block; width: 100%; }
 /* 번호 */
 .page02-num {
   font-weight: 600;
-  font-size: 14px;
+  font-size: clamp(10px, 0.7292vw, 14px);
   color: #030303;
 }
 
-
-/* 프로젝트명 */
 .page02-title {
   font-weight: 600;
-  font-size: 16px;
+  font-size: clamp(11px, 0.8333vw, 16px);
   color: #030303;
 }
 
-
-/* 프로젝트 설명 */
 .page02-desc {
   font-weight: 400;
-  font-size: 14px;
+  font-size: clamp(10px, 0.7292vw, 14px);
   color: #585858;
 }
