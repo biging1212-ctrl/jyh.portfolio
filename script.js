@@ -480,7 +480,7 @@ function addProjectIndex(slot) {
 
           font-family:'Fustat', sans-serif;
           font-weight:600;
-          font-size:16px;
+          font-size:14px;
           line-height:1;
           color:#030303;
           text-align:left;
@@ -524,7 +524,7 @@ function addProjectIndex(slot) {
 
           font-family:'Fustat', sans-serif;
           font-weight:600;
-          font-size:18px;
+          font-size:16px;
           line-height:1;
           color:#030303;
           text-align:center;
@@ -544,7 +544,7 @@ function addProjectIndex(slot) {
 
           font-family:'Fustat', sans-serif;
           font-weight:400;
-          font-size:16px;
+          font-size:14px;
           line-height:1;
           color:#363636;
           text-align:center;
