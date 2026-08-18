@@ -583,6 +583,7 @@ img, video { display: block; width: 100%; }
   display: none;
 }
 
+/* Page 02 배경 */
 .project-index-bg {
   position: absolute;
   inset: 0;
@@ -594,6 +595,7 @@ img, video { display: block; width: 100%; }
   pointer-events: none;
 }
 
+/* 프로젝트 전체 레이어 */
 .page02-project-layer {
   position: absolute;
   inset: 0;
@@ -603,15 +605,18 @@ img, video { display: block; width: 100%; }
   pointer-events: none;
 }
 
-/* 이미지: 192 × 133 / 1920 × 1080 기준 */
+
+/* ── 프로젝트 이미지 ── */
+/*
+  프로젝트별 x, y, width, height는
+  script.js에서 각각 지정
+*/
 .page02-thumb {
   position: absolute;
-  top: 69.2593%;      /* y: 748 */
-  width: 10%;     /* 192 / 1920 */
-  height: 12.3148%;   /* 133 / 1080 */
   display: block;
   z-index: 2;
   pointer-events: auto;
+  overflow: hidden;
 }
 
 .page02-thumb img {
@@ -627,12 +632,11 @@ img, video { display: block; width: 100%; }
   opacity: 0.75 !important;
 }
 
-/* 공통 타이포 */
+
+/* ── 공통 텍스트 ── */
 .page02-text {
   position: absolute;
   font-family: var(--font);
-  font-size: clamp(10px, 0.7292vw, 14px); /* 14px @ 1920 */
-  font-weight: 600;
   line-height: 1;
   letter-spacing: 0;
   white-space: nowrap;
@@ -640,20 +644,26 @@ img, video { display: block; width: 100%; }
   pointer-events: none;
 }
 
+
 /* 번호 */
 .page02-num {
-  top: 67.5926%; /* y: 730 */
+  font-weight: 600;
+  font-size: 14px;
   color: #030303;
 }
+
 
 /* 프로젝트명 */
 .page02-title {
-  top: 83.3333%; /* y: 900 */
+  font-weight: 600;
+  font-size: 16px;
   color: #030303;
 }
 
-/* 설명 */
+
+/* 프로젝트 설명 */
 .page02-desc {
-  top: 85.1852%; /* y: 920 */
-  color: #363636;
+  font-weight: 400;
+  font-size: 14px;
+  color: #585858;
 }
