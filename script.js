@@ -373,47 +373,89 @@ function addProjectIndex(slot) {
     {
       num: '01',
       title: 'TIDE',
-      desc: 'Branding',
+      desc: 'Beauty Tech Branding',
       image: 'assets/images/project-01.png',
       target: '#page-03',
-      imgX: 220,
-      textX: 220
+
+      imgX: 200,
+      imgY: 402,
+      imgW: 362,
+      imgH: 277,
+
+      numX: 365,
+      numY: 363,
+
+      titleX: 363,
+      titleY: 695,
+
+      descX: 305,
+      descY: 723
     },
+
     {
       num: '02',
       title: 'DAYMINE',
-      desc: 'Branding',
+      desc: 'Health Care Branding',
       image: 'assets/images/project-02.png',
       target: '#page-19',
-      imgX: 542,
-      textX: 542
+
+      imgX: 586,
+      imgY: 402,
+      imgW: 362,
+      imgH: 518,
+
+      numX: 751,
+      numY: 363,
+
+      titleX: 729,
+      titleY: 941,
+
+      descX: 691,
+      descY: 964
     },
+
     {
       num: '03',
-      title: 'ORION',
-      desc: 'Promotion Content / 실무',
+      title: '3.3',
+      desc: 'Pop - Up Store',
       image: 'assets/images/project-03.png',
-      target: '#page-32',
-      imgX: 864,
-      textX: 864
+      target: '#page-34',
+
+      imgX: 972,
+      imgY: 402,
+      imgW: 362,
+      imgH: 277,
+
+      numX: 1137,
+      numY: 363,
+
+      titleX: 1141,
+      titleY: 700,
+
+      descX: 1101,
+      descY: 723
     },
+
     {
       num: '04',
-      title: '빙그레',
-      desc: 'Pop-up Store / 실무',
+      title: 'ORION',
+      desc: 'Promotion Contents',
       image: 'assets/images/project-04.png',
-      target: '#page-39',
-      imgX: 1186,
-      textX: 1186
-    },
-    {
-      num: '05',
-      title: '롯데렌터카',
-      desc: 'Promotion Content/ 실무',
-      image: 'assets/images/project-05.png',
-      target: '#page-50',
-      imgX: 1508,
-      textX: 1508
+      target: '#page-43',
+
+      imgX: 1358,
+      imgY: 402,
+      imgW: 362,
+      imgH: 362,
+
+      numX: 1523,
+      numY: 363,
+
+      titleX: 1512,
+      titleY: 785,
+
+      descX: 1467,
+      descY: 808
     }
   ];
 
@@ -421,18 +463,97 @@ function addProjectIndex(slot) {
   layer.className = 'page02-project-layer';
 
   projects.forEach((project) => {
-    const imgLeft = `${(project.imgX / 1920) * 100}%`;
-    const textLeft = `${(project.textX / 1920) * 100}%`;
+
+    // 1920 × 1080 디자인 기준 좌표를
+    // 반응형 퍼센트 좌표로 변환
+    const px = (value) => `${(value / 1920) * 100}%`;
+    const py = (value) => `${(value / 1080) * 100}%`;
 
     layer.innerHTML += `
-      <span class="page02-text page02-num" style="left:${textLeft};">${project.num}</span>
 
-      <a class="page02-thumb" href="${project.target}" style="left:${imgLeft};">
-        <img src="${project.image}" alt="" />
+      <!-- PROJECT NUMBER -->
+      <span
+        class="page02-text page02-num"
+        style="
+          left:${px(project.numX)};
+          top:${py(project.numY)};
+
+          font-family:'Fustat', sans-serif;
+          font-weight:600;
+          font-size:16px;
+          line-height:1;
+          color:#030303;
+          text-align:left;
+          white-space:nowrap;
+        "
+      >
+        ${project.num}
+      </span>
+
+
+      <!-- PROJECT IMAGE -->
+      <a
+        class="page02-thumb"
+        href="${project.target}"
+        style="
+          left:${px(project.imgX)};
+          top:${py(project.imgY)};
+          width:${px(project.imgW)};
+          height:${py(project.imgH)};
+        "
+      >
+        <img
+          src="${project.image}"
+          alt=""
+          style="
+            width:100%;
+            height:100%;
+            object-fit:cover;
+            display:block;
+          "
+        />
       </a>
 
-      <span class="page02-text page02-title" style="left:${textLeft};">${project.title}</span>
-      <span class="page02-text page02-desc" style="left:${textLeft};">${project.desc}</span>
+
+      <!-- PROJECT TITLE -->
+      <span
+        class="page02-text page02-title"
+        style="
+          left:${px(project.titleX)};
+          top:${py(project.titleY)};
+
+          font-family:'Fustat', sans-serif;
+          font-weight:600;
+          font-size:18px;
+          line-height:1;
+          color:#030303;
+          text-align:center;
+          white-space:nowrap;
+        "
+      >
+        ${project.title}
+      </span>
+
+
+      <!-- PROJECT DESCRIPTION -->
+      <span
+        class="page02-text page02-desc"
+        style="
+          left:${px(project.descX)};
+          top:${py(project.descY)};
+
+          font-family:'Fustat', sans-serif;
+          font-weight:400;
+          font-size:16px;
+          line-height:1;
+          color:#363636;
+          text-align:center;
+          white-space:nowrap;
+        "
+      >
+        ${project.desc}
+      </span>
+
     `;
   });
 
