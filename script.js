@@ -370,188 +370,184 @@ trackedSections.forEach((s) => navObserver.observe(s));
 
 function addProjectIndex(slot) {
   const projects = [
-  {
-    num: '01',
-    title: 'TIDE',
-    desc: 'Beauty Tech Branding',
-    image: 'assets/images/project-01.png',
-    target: '#page-03',
+    {
+      num: '01',
+      title: 'TIDE',
+      desc: 'Beauty Tech Branding',
+      image: 'assets/images/project-01.png',
+      target: '#page-03',
 
-    imgX: 200,
-    imgY: 402,
-    imgW: 335,
-    imgH: 256,
+      imgX: 200,
+      imgY: 401,
+      imgW: 249,
+      imgH: 263,
 
-    numX: 351,
-    numY: 367,
+      numX: 308,
+      numY: 366,
 
-    titleX: 349,
-    titleY: 680,
+      titleX: 306,
+      titleY: 686,
 
-    descX: 291,
-    descY: 705
-  },
+      descX: 248,
+      descY: 711
+    },
 
-  {
-    num: '02',
-    title: 'DAYMINE',
-    desc: 'Health Care Branding',
-    image: 'assets/images/project-02.png',
-    target: '#page-19',
+    {
+      num: '02',
+      title: 'DAYMINE',
+      desc: 'Health Care Branding',
+      image: 'assets/images/project-02.png',
+      target: '#page-19',
 
-    imgX: 597,
-    imgY: 402,
-    imgW: 335,
-    imgH: 451,
+      imgX: 519,
+      imgY: 401,
+      imgW: 249,
+      imgH: 405,
 
-    numX: 748,
-    numY: 367,
+      numX: 626,
+      numY: 366,
 
-    titleX: 727,
-    titleY: 875,
+      titleX: 605,
+      titleY: 828,
 
-    descX: 689,
-    descY: 900
-  },
+      descX: 567,
+      descY: 853
+    },
 
-  {
-    num: '03',
-    title: '3.3',
-    desc: 'Pop - Up Store',
-    image: 'assets/images/project-03.png',
-    target: '#page-32',
+    {
+      num: '03',
+      title: '3.3',
+      desc: 'Pop - Up Store',
+      image: 'assets/images/project-03.png',
+      target: '#page-32',
 
-    imgX: 994,
-    imgY: 402,
-    imgW: 335,
-    imgH: 256,
+      imgX: 836,
+      imgY: 401,
+      imgW: 249,
+      imgH: 263,
 
-    numX: 1145,
-    numY: 367,
+      numX: 944,
+      numY: 366,
 
-    titleX: 1150,
-    titleY: 680,
+      titleX: 949,
+      titleY: 686,
 
-    descX: 1110,
-    descY: 705
-  },
+      descX: 909,
+      descY: 711
+    },
 
-  {
-    num: '04',
-    title: 'ORION',
-    desc: 'Promotion Contents',
-    image: 'assets/images/project-04.png',
-    target: '#page-39',
+    {
+      num: '04',
+      title: 'ORION',
+      desc: 'Promotion Contents',
+      image: 'assets/images/project-04.png',
+      target: '#page-39',
 
-    imgX: 1391,
-    imgY: 402,
-    imgW: 335,
-    imgH: 315,
+      imgX: 1155,
+      imgY: 401,
+      imgW: 249,
+      imgH: 348,
 
-    numX: 1542,
-    numY: 367,
+      numX: 1262,
+      numY: 366,
 
-    titleX: 1531,
-    titleY: 739,
+      titleX: 1251,
+      titleY: 771,
 
-    descX: 1486,
-    descY: 764
-  }
-];
+      descX: 1206,
+      descY: 796
+    },
+
+    {
+      num: '05',
+      title: 'BINGGRAE',
+      desc: 'Pop - Up Store',
+      image: 'assets/images/project-05.png',
+      target: '#page-50',
+
+      imgX: 1472,
+      imgY: 401,
+      imgW: 249,
+      imgH: 263,
+
+      numX: 1579,
+      numY: 366,
+
+      titleX: 1552,
+      titleY: 686,
+
+      descX: 1544,
+      descY: 711
+    }
+  ];
+
 
   const layer = document.createElement('div');
   layer.className = 'page02-project-layer';
 
-  projects.forEach((project) => {
 
-  // Figma 기준 1920 × 1080 좌표를 %로 변환
+  // 1920 × 1080 Figma 좌표 → 반응형 % 좌표
   const x = (value) => `${(value / 1920) * 100}%`;
   const y = (value) => `${(value / 1080) * 100}%`;
 
-  layer.innerHTML += `
 
-    <!-- 프로젝트 번호 -->
-    <span
-      class="page02-text page02-num"
-      style="
-        left:${x(project.numX)};
-        top:${y(project.numY)};
-        font-family:'Fustat', sans-serif;
-        font-weight:600;
-        font-size:14px;
-        color:#030303;
-        text-align:center;
-        transform:none;
-        white-space:nowrap;
-      "
-    >
-      ${project.num}
-    </span>
+  projects.forEach((project) => {
 
+    layer.innerHTML += `
 
-    <!-- 프로젝트 이미지 -->
-    <a
-      class="page02-thumb"
-      href="${project.target}"
-      style="
-        left:${x(project.imgX)};
-        top:${y(project.imgY)};
-        width:${x(project.imgW)};
-        height:${y(project.imgH)};
-        transform:none;
-      "
-    >
-      <img
-        src="${project.image}"
-        alt=""
+      <!-- 프로젝트 번호 -->
+      <span
+        class="page02-text page02-num"
         style="
-          width:100%;
-          height:100%;
-          object-fit:cover;
-          display:block;
+          left:${x(project.numX)};
+          top:${y(project.numY)};
         "
-      />
-    </a>
+      >
+        ${project.num}
+      </span>
 
 
-    <!-- 프로젝트 제목 -->
-    <span
-      class="page02-text page02-title"
-      style="
-        left:${x(project.titleX)};
-        top:${y(project.titleY)};
-        font-family:'Fustat', sans-serif;
-        font-weight:600;
-        font-size:16px;
-        color:#030303;
-        text-align:center;
-        transform:none;
-        white-space:nowrap;
-      "
-    >
-      ${project.title}
-    </span>
+      <!-- 프로젝트 이미지 -->
+      <a
+        class="page02-thumb"
+        href="${project.target}"
+        style="
+          left:${x(project.imgX)};
+          top:${y(project.imgY)};
+          width:${x(project.imgW)};
+          height:${y(project.imgH)};
+        "
+      >
+        <img src="${project.image}" alt="" />
+      </a>
 
 
-    <!-- 프로젝트 설명 -->
-    <span
-      class="page02-text page02-desc"
-      style="
-        left:${x(project.descX)};
-        top:${y(project.descY)};
-        font-family:'Fustat', sans-serif;
-        font-weight:400;
-        font-size:14px;
-        color:#585858;
-        text-align:center;
-        transform:none;
-        white-space:nowrap;
-      "
-    >
-      ${project.desc}
-    </span>
-  `;
-});
+      <!-- 프로젝트명 -->
+      <span
+        class="page02-text page02-title"
+        style="
+          left:${x(project.titleX)};
+          top:${y(project.titleY)};
+        "
+      >
+        ${project.title}
+      </span>
+
+
+      <!-- 프로젝트 설명 -->
+      <span
+        class="page02-text page02-desc"
+        style="
+          left:${x(project.descX)};
+          top:${y(project.descY)};
+        "
+      >
+        ${project.desc}
+      </span>
+
+    `;
+  });
+
 
   slot.appendChild(layer);
 }
