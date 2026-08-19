@@ -53,6 +53,34 @@
 
 })();
 
+// ── Show NAV after leaving the first page ──
+(function initHeroNav() {
+
+  const nav = document.querySelector('.nav');
+  const hero = document.getElementById('home');
+
+  if (!nav || !hero) return;
+
+  function updateNav() {
+    const heroBottom = hero.getBoundingClientRect().bottom;
+
+    if (heroBottom <= 0) {
+      nav.classList.add('show-nav');
+    } else {
+      nav.classList.remove('show-nav');
+    }
+  }
+
+  window.addEventListener('scroll', updateNav, {
+    passive: true
+  });
+
+  window.addEventListener('resize', updateNav);
+
+  updateNav();
+
+})();
+
 // ── Config ──
 const TOTAL_PAGES = 58; // pages 2–59 (page 60 = closing HTML)
 const FINAL_PAGE_TOTAL = 60;
