@@ -191,9 +191,10 @@ img, video { display: block; width: 100%; }
 
 /* Brand Visual Communication */
 .hero-small-left {
-  left: 26.5%;
+  left: auto;
+  right: 61.5%;
   top: 53.1%;
-  width: 150px;
+  width: 180px;
   text-align: right;
 }
 
