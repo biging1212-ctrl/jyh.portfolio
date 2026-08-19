@@ -53,13 +53,14 @@
 })();
 
 // ── Config ──
-const TOTAL_PAGES = 47; // pages 2–48 (page 49 = closing HTML)
-const FINAL_PAGE_TOTAL = 49;
+const TOTAL_PAGES = 58; // pages 2–59 (page 60 = closing HTML)
+const FINAL_PAGE_TOTAL = 60;
 const STORAGE_KEY = 'portfolio_slots';
 
 const VIDEO_PAGES = new Set([
   4, 13, 22, 23, 27, 30,
-  36, 38, 45, 46, 47
+  36, 38, 45, 46, 47,
+  50, 52, 53, 55, 56
 ]);
 
 // ── Load saved slots from localStorage ──
