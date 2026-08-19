@@ -254,13 +254,13 @@ img, video { display: block; width: 100%; }
 .pixel-tr-1 {
   right: 0;
   top: 0;
-  background: #FF5A00;
+  background: #171717;
 }
 
 .pixel-tr-2 {
   right: 3.125%;
   top: 5.556%;
-  background: #FF5A00;
+  background: #171717;
 }
 
 
@@ -268,13 +268,13 @@ img, video { display: block; width: 100%; }
 .pixel-bl-1 {
   left: 0;
   bottom: 0;
-  background: #FF5A00;
+  background: #171717;
 }
 
 .pixel-bl-2 {
   left: 3.125%;
   bottom: 5.556%;
-  background: #FF5A00;
+  background: #171717;
 }
 
 
