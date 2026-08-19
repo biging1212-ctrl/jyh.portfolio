@@ -449,7 +449,7 @@ function addProjectIndex(slot) {
       title: '3.3',
       desc: 'Pop - Up Store',
       image: 'assets/images/project-03.png',
-      target: '#page-32',
+      target: '#page-34',
 
       imgX: 836,
       imgY: 401,
@@ -471,7 +471,7 @@ function addProjectIndex(slot) {
       title: 'ORION',
       desc: 'Promotion Contents',
       image: 'assets/images/project-04.png',
-      target: '#page-39',
+      target: '#page-43',
 
       imgX: 1155,
       imgY: 401,
