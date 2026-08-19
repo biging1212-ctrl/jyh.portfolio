@@ -372,7 +372,7 @@ trackedSections.forEach((s) => navObserver.observe(s));
 function addProjectIndex(slot) {
   const projects = [
     {
-      num: '01',
+      num: '(01)',
       title: 'TIDE',
       desc: 'Beauty Tech Branding',
       image: 'assets/images/project-01.png',
@@ -389,12 +389,12 @@ function addProjectIndex(slot) {
       titleX: 306,
       titleY: 686,
 
-      descX: 248,
-      descY: 711
+      descX: 250,
+      descY: 710
     },
 
     {
-      num: '02',
+      num: '(02)',
       title: 'DAYMINE',
       desc: 'Health Care Branding',
       image: 'assets/images/project-02.png',
@@ -411,12 +411,12 @@ function addProjectIndex(slot) {
       titleX: 605,
       titleY: 828,
 
-      descX: 567,
-      descY: 853
+      descX: 569,
+      descY: 852
     },
 
     {
-      num: '03',
+      num: '(03)',
       title: '3.3',
       desc: 'Pop - Up Store',
       image: 'assets/images/project-03.png',
@@ -433,12 +433,12 @@ function addProjectIndex(slot) {
       titleX: 949,
       titleY: 686,
 
-      descX: 909,
-      descY: 711
+      descX: 911,
+      descY: 710
     },
 
     {
-      num: '04',
+      num: '(04)',
       title: 'ORION',
       desc: 'Promotion Contents',
       image: 'assets/images/project-04.png',
@@ -455,12 +455,12 @@ function addProjectIndex(slot) {
       titleX: 1251,
       titleY: 771,
 
-      descX: 1206,
-      descY: 796
+      descX: 1208,
+      descY: 795
     },
 
     {
-      num: '05',
+      num: '(05)',
       title: 'BINGGRAE',
       desc: 'Pop - Up Store',
       image: 'assets/images/project-05.png',
@@ -477,8 +477,8 @@ function addProjectIndex(slot) {
       titleX: 1552,
       titleY: 686,
 
-      descX: 1544,
-      descY: 711
+      descX: 1546,
+      descY: 710
     }
   ];
 
