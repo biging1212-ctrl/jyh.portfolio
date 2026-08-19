@@ -1,55 +1,56 @@
-// ── Hero Typing Animation ──
+// ── Hero : YOUNG HYEON Typing Animation ──
+
 (function initTyping() {
-  const line1 = document.getElementById('typing-line-1');
-  const line2 = document.getElementById('typing-line-2');
-  if (!line1 || !line2) return;
 
-  const TEXT_1     = 'PORTFOLIO';
-  const TEXT_2     = '2026';
-  const CHAR_SPEED = 80;   // ms per character
-  const LINE_PAUSE = 220;  // ms pause between lines
-  const END_PAUSE  = 900;  // ms before cursor disappears
+  const target = document.getElementById('typing-young');
+  const cursor = document.getElementById('hero-cursor');
 
-  // Use inner text spans so cursor element never contaminates textContent
-  const t1 = document.createElement('span');
-  const t2 = document.createElement('span');
-  const cursor = document.createElement('span');
-  cursor.className = 'hero-cursor';
-  cursor.textContent = '|';
+  if (!target) return;
 
-  line1.appendChild(t1);
-  line1.appendChild(cursor); // cursor starts after line1
 
-  function typeInto(el, text) {
-    return new Promise((resolve) => {
-      let i = 0;
-      const tick = setInterval(() => {
-        el.textContent += text[i++];
-        if (i >= text.length) { clearInterval(tick); resolve(); }
-      }, CHAR_SPEED);
-    });
+  const TEXT = 'YOUNG HYEON';
+
+  const CHAR_SPEED = 90;
+  const START_DELAY = 500;
+  const END_PAUSE = 900;
+
+
+  let index = 0;
+
+
+  function type() {
+
+    if (index < TEXT.length) {
+
+      target.textContent += TEXT[index];
+
+      index++;
+
+      setTimeout(type, CHAR_SPEED);
+
+    } else {
+
+      // 타이핑 완료 후 잠시 있다 커서 제거
+      setTimeout(() => {
+
+        if (!cursor) return;
+
+        cursor.style.transition = 'opacity 0.5s';
+        cursor.style.opacity = '0';
+
+        setTimeout(() => {
+          cursor.remove();
+        }, 500);
+
+      }, END_PAUSE);
+
+    }
+
   }
 
-  async function run() {
-    await new Promise((r) => setTimeout(r, 400));
 
-    await typeInto(t1, TEXT_1);
-    await new Promise((r) => setTimeout(r, LINE_PAUSE));
+  setTimeout(type, START_DELAY);
 
-    // move cursor to line2
-    line2.appendChild(t2);
-    line2.appendChild(cursor);
-
-    await typeInto(t2, TEXT_2);
-    await new Promise((r) => setTimeout(r, END_PAUSE));
-
-    // fade out cursor and remove
-    cursor.style.transition = 'opacity 0.5s';
-    cursor.style.opacity    = '0';
-    setTimeout(() => cursor.remove(), 600);
-  }
-
-  run();
 })();
 
 // ── Config ──
