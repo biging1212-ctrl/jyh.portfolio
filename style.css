@@ -66,6 +66,23 @@ img, video { display: block; width: 100%; }
   padding: 18px var(--col-margin);
   background: #EFEDEB;
   color: #030303;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(-100%);
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease,
+    visibility 0.25s;
+}
+
+.nav.show-nav {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
 }
 
 .nav-name {
@@ -139,25 +156,19 @@ img, video { display: block; width: 100%; }
 
 /* 2026 */
 .hero-year {
-  top: 22.2%;
+  top: 24.6%;
 }
 
-
-/* YOUNG HYEON */
 .hero-young {
-  top: 33%;
+  top: 37.3%;
 }
 
-
-/* DESIGN */
 .hero-design {
-  top: 44.7%;
+  top: 50%;
 }
 
-
-/* PORTFOLIO */
 .hero-portfolio {
-  top: 56%;
+  top: 62.9%;
 }
 
 
@@ -180,8 +191,8 @@ img, video { display: block; width: 100%; }
 
 /* Brand Visual Communication */
 .hero-small-left {
-  left: 34.4%;
-  top: 46.9%;
+  left: 32.8%;
+  top: 53.1%;
   text-align: right;
 }
 
@@ -189,7 +200,7 @@ img, video { display: block; width: 100%; }
 /* Jeon */
 .hero-small-right {
   left: 79.8%;
-  top: 37%;
+  top: 41.6%;
 }
 
 
