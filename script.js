@@ -464,7 +464,7 @@ function addProjectIndex(slot) {
       title: 'BINGGRAE',
       desc: 'Pop - Up Store',
       image: 'assets/images/project-05.png',
-      target: '#page-50',
+      target: '#page-49',
 
       imgX: 1472,
       imgY: 401,
