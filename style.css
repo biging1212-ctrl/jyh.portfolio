@@ -434,60 +434,105 @@ img, video { display: block; width: 100%; }
 }
 
 
-/* ── Page 65: Closing ── */
-/*
-  Figma 1920×1080 기준
-  vw = px ÷ 1920 × 100
-  vh = px ÷ 1080 × 100
-*/
+/* ── Closing Page ── */
+/* Figma canvas: 1920 × 850 */
+
 .closing-page {
   position: relative;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  background: #000000;
-  overflow: hidden;
-}
 
-.closing-page span {
-  position: absolute;
+  width: 100%;
+  max-width: 1920px;
+
+  /* 1920 × 850 비율 */
+  aspect-ratio: 1920 / 850;
+
+  margin: 0 auto;
+
+  background: #EFEDEB;
+  color: #030303;
+
+  overflow: hidden;
+
   font-family: var(--font);
 }
 
-.cl-name {
-  /* 50px @ 1920 = 2.604vw */
-  font-size: clamp(18px, 2.604vw, 50px);
-  font-weight: 700;
-  color: #fff;
+
+/* ── ( JEON YOUNG HYEON ) ── */
+
+.closing-name {
+  position: absolute;
+
+  left: 50%;
+  top: 27.4118%; /* 233 / 850 */
+
+  transform: translateX(-50%);
+
+  font-family: var(--font);
+  font-weight: 800; /* Fustat ExtraBold */
+
+  font-size: clamp(40px, 5.2083vw, 100px);
+
+  letter-spacing: -0.02em;
+
+  line-height: 1;
+
+  text-align: center;
+  white-space: nowrap;
 }
 
-.cl-title {
-  font-size: clamp(18px, 2.604vw, 50px);
-  font-weight: 700;
-  line-height: 1.17;
-  color: #fff;
+
+/* ── Designer ── */
+
+.closing-designer {
+  position: absolute;
+
+  left: 50%;
+  top: 39.8824%; /* 339 / 850 */
+
+  transform: translateX(-50%);
+
+  font-family: var(--font);
+  font-weight: 800; /* Fustat ExtraBold */
+
+  font-size: clamp(40px, 5.2083vw, 100px);
+
+  letter-spacing: -0.02em;
+
+  line-height: 1;
+
+  text-align: center;
+  white-space: nowrap;
 }
 
-.cl-sub {
-  /* 20px @ 1920 = 1.042vw */
-  font-size: clamp(9px, 1.042vw, 20px);
-  font-weight: 700;
+
+/* ── Closing Message ── */
+
+.closing-message {
+  position: absolute;
+
+  left: 50%;
+  top: 64.9412%; /* 552 / 850 */
+
+  transform: translateX(-50%);
+
+  font-family: var(--font);
+  font-weight: 600; /* Fustat SemiBold */
+
+  font-size: clamp(13px, 1.3021vw, 25px);
+
+  letter-spacing: -0.01em;
+
   line-height: 1.3;
-  color: #fff;
-  text-transform: uppercase;
+
+  text-align: center;
+  white-space: nowrap;
 }
 
-.cl-label {
-  font-size: clamp(9px, 1.042vw, 20px);
-  font-weight: 600;
-  line-height: 1.3;
-  color: #999999;
-}
 
-.cl-value {
-  font-size: clamp(9px, 1.042vw, 20px);
-  font-weight: 600;
-  line-height: 1.3;
-  color: #fff;
+/* Bioplus 강조 */
+
+.closing-message strong {
+  font-weight: 800;
 }
 
 /* ── Download Section ── */
