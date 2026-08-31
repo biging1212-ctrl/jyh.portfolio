@@ -565,31 +565,6 @@ img, video { display: block; width: 100%; }
   font-family: var(--font);
 }
 
-/* ── Page 17: YouTube Video ── */
-.youtube-page {
-  position: relative;
-  background: #FF7B23;
-}
-
-.youtube-video-wrap {
-  position: absolute;
-  top: 5px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 70.7291667%;
-  aspect-ratio: 1358 / 764;
-  background: #000000;
-  overflow: hidden;
-  line-height: 0;
-}
-
-.youtube-video-wrap iframe {
-  display: block;
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
-
 
 /* ── Closing Page ── */
 /* Figma canvas: 1920 × 1000 */
