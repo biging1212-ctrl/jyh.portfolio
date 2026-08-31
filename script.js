@@ -77,8 +77,8 @@
 })();
 
 // ── Config ──
-const TOTAL_PAGES = 61; // pages 2–62 (page 63 = closing HTML)
-const FINAL_PAGE_TOTAL = 63;
+const TOTAL_PAGES = 58; // pages 2–59 (page 60 = closing HTML)
+const FINAL_PAGE_TOTAL = 60;
 const STORAGE_KEY = 'portfolio_slots';
 
 const VIDEO_PAGES = new Set([
