@@ -82,10 +82,10 @@ const FINAL_PAGE_TOTAL = 63;
 const STORAGE_KEY = 'portfolio_slots';
 
 const VIDEO_PAGES = new Set([
-  4, 9, 19, 24, 25, 29,
-  32, 38, 40, 44, 48,
-  52, 55, 56, 59,
-  60, 61
+  4, 13, 22, 23, 27,
+  30, 36, 38,
+  42, 45, 46, 47,
+  50, 53, 55, 56
 ]);
 
 // ── Load saved slots from localStorage ──
@@ -129,32 +129,6 @@ if (pageNum === 2) {
   continue;
 }
 
-  // ── PAGE 17: YouTube Video ──
-if (pageNum === 17) {
-  slot.classList.add('youtube-page');
-
-  const videoWrap = document.createElement('div');
-  videoWrap.className = 'youtube-video-wrap';
-
-  const iframe = document.createElement('iframe');
-
-  iframe.src =
-    'https://www.youtube-nocookie.com/embed/9JKTAvEiiZU?rel=0&playsinline=1';
-
-  iframe.title = 'Portfolio YouTube Video';
-
-  iframe.allow =
-    'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
-
-  iframe.allowFullscreen = true;
-
-  videoWrap.appendChild(iframe);
-  slot.appendChild(videoWrap);
-
-  section.appendChild(slot);
-
-  continue;
-}
   
   // upload zone
   const zone = document.createElement('div');
@@ -407,8 +381,8 @@ function addProjectIndex(slot) {
   const projects = [
     {
       num: '(01)',
-      title: 'WINKLE',
-      desc: 'Beverage Branding',
+      title: 'TIDE',
+      desc: 'Scalp Beauty Branding',
       image: 'assets/images/project-01.png',
       target: '#page-03',
 
@@ -429,7 +403,7 @@ function addProjectIndex(slot) {
       title: 'DAYMINE',
       desc: 'Health Care Branding',
       image: 'assets/images/project-02.png',
-      target: '#page-21',
+      target: '#page-19',
 
       imgX: 519,
       imgY: 401,
@@ -451,7 +425,7 @@ function addProjectIndex(slot) {
       title: '3.3',
       desc: 'Pop - Up Store / 실무',
       image: 'assets/images/project-03.png',
-      target: '#page-36',
+      target: '#page-34',
 
       imgX: 836,
       imgY: 401,
@@ -470,10 +444,10 @@ function addProjectIndex(slot) {
 
     {
       num: '(04)',
-      title: 'BPT',
-      desc: 'Rebranding / 실무',
+      title: 'ORION',
+      desc: 'Promotion Contents / 실무',
       image: 'assets/images/project-04.png',
-      target: '#page-45',
+      target: '#page-43',
 
       imgX: 1155,
       imgY: 401,
@@ -492,10 +466,10 @@ function addProjectIndex(slot) {
 
     {
       num: '(05)',
-      title: 'ORION',
-      desc: 'Promotion Contents / 실무',
+      title: 'BINGGRAE',
+      desc: 'Pop - Up Store / 실무',
       image: 'assets/images/project-05.png',
-      target: '#page-57',
+      target: '#page-49',
 
       imgX: 1472,
       imgY: 401,
